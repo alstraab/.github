@@ -17,11 +17,6 @@ Provide a more detailed description of the feature. Focus on the user experience
 List the key criteria that must be met for this feature to be considered complete. This might include functionality, tests, or documentation.
 -->
 
-## Mockups / Wireframes
-<!-- 
-If applicable, add mockups, wireframes, or diagrams to provide a visual representation of the feature. 
--->
-
 ## Additional Context (Optional)
 <!-- 
 Add any other context or screenshots about the feature request here. This can include mockups or links to related issues.
