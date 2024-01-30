@@ -1,7 +1,7 @@
 ---
 name: Build/CI Issues
 about: Report issues related to the build, CI, or deployment process.
-labels: build, ci
+labels: ci/cd
 ---
 
 ## Overview
