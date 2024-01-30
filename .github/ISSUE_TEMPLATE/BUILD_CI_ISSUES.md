@@ -1,7 +1,7 @@
 ---
 name: Build/CI Issues
 about: Report issues related to the build, CI, or deployment process.
-labels: build, ci, needs-triage
+labels: build, ci
 ---
 
 ## Overview
@@ -19,10 +19,6 @@ labels: build, ci, needs-triage
 ## Reproduction Steps
 
 <!-- Describe the steps to reproduce the issue. If applicable, include any scripts or commands run. -->
-
-1. Step 1
-2. Step 2
-3. Step 3
 
 ## Expected vs Actual Behavior
 
