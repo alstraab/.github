@@ -1,7 +1,7 @@
 ---
 name: General Question or Concern
 about: Have a question or concern that doesn't fit into the other categories? Use this template.
-labels: question, needs-triage
+labels: question
 ---
 
 ## Subject
