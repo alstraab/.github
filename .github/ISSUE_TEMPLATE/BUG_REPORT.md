@@ -8,36 +8,30 @@ labels: bug
 
 <!-- Provide a clear and concise description of the issue or feature request -->
 
-### Screenshots
-
-<!-- If applicable, add screenshots to help explain the issue -->
-
 ### Expected Behavior
 
 <!-- What did you expect to happen? -->
 
 ### Actual Behavior
 
-<!-- What actually happened? If applicable, add screenshots to help explain the issue -->
+<!-- What actually happened? -->
 
 ### Steps to Reproduce
 
-<!--
-Please provide detailed steps for reproducing the issue.
-
-1. Step 1
-2. Step 2
-3. Step 3
--->
+<!-- Please provide detailed steps for reproducing the issue. -->
 
 ### Environment Details
 
-<!-- Provide any applicable details about your environment, such as:
+<!-- If applicable, provide details about your environment, such as:
 
 - Browser Version
 - Operating System
 - Relevant software versions (Node, etc.)
 -->
+
+### Screenshots
+
+<!-- If applicable, add screenshots to help explain the issue -->
 
 ### Additional Context
 
