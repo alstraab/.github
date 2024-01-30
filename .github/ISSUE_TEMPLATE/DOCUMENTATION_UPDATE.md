@@ -1,7 +1,7 @@
 ---
 name: Documentation Update
 about: Propose updates, fixes, or improvements to the project documentation.
-labels: documentation, needs-review
+labels: documentation
 ---
 
 ## Overview
