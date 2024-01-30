@@ -1,7 +1,7 @@
 ---
 name: Dependency Update
 about: Report an outdated dependency or suggest an update.
-labels: dependency-update, needs-triage
+labels: dependency-update
 ---
 
 ## Dependency Name
@@ -27,10 +27,6 @@ labels: dependency-update, needs-triage
 ## Suggested Action Plan
 
 <!-- If applicable, suggest steps for updating the dependency. -->
-
-1. Step 1
-2. Step 2
-3. Step 3
 
 ## Additional Information
 
