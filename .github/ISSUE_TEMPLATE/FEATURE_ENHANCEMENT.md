@@ -1,7 +1,7 @@
 ---
 name: Feature Enhancement
 about: Suggest an improvement or extension to an existing feature.
-labels: enhancement, needs-triage
+labels: enhancement
 ---
 
 ## Existing Feature
