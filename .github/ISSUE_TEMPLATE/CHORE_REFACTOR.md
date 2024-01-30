@@ -1,7 +1,7 @@
 ---
 name: Chore/Refactor
 about: Propose a non-feature or non-bug work like code refactoring, test improvements, or technical debt.
-labels: chore, technical-debt, needs-review
+labels: chore
 ---
 
 ## Overview
