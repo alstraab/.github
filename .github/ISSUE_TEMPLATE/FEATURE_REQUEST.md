@@ -1,7 +1,7 @@
 ---
 name: Feature Request
 about: Suggest an idea or new feature for this project.
-labels: enhancement, needs-review
+labels: enhancement
 ---
 
 ## Feature Description
