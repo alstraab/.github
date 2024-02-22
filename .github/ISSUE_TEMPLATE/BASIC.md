@@ -9,5 +9,5 @@ about: A simple basic template.
 ### Any suggestions on how to approach this?
 <!-- Optional: If you have ideas on how to fix this issue, please share them here. -->
 
-### Why is this important?
-<!-- Optional: Explain why this issue should be addressed. This helps prioritize the issue by understanding its impact or urgency. -->
+### Additional Notes
+<!-- Optional: Include any other information that might be helpful for understanding or resolving the issue. -->
