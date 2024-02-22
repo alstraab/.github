@@ -1,6 +1,6 @@
 ---
-name: Generic Report
-about: A simple generic template.
+name: Basic Issue
+about: A simple basic template.
 ---
 
 ### What needs to be done?
