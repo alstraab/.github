@@ -23,13 +23,14 @@ jobs:
             --title "${{ env.TITLE }}" \
             --label "${{ env.LABELS }}" \
             --body "${{ env.BODY }}")
+            --assignee "${{ env.ASSIGNEES }}"
           echo "Issue created: $new_issue_url"
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GH_REPO: ${{ inputs.REPO }}
           TITLE: "Monthly Dependency Update Reminder"
           LABELS: "dependencies"
-          ASSIGNEES: "juliandreas"
+          ASSIGNEES: juliandreas
           BODY: |
             It's time to check and update our packages to the latest versions.
             - [ ] Review outdated packages
