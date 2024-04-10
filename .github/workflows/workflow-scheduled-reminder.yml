@@ -11,3 +11,9 @@ jobs:
     secrets: inherit
     with:
       REPO: "alstraab/alstra-web"
+
+  survey-generator:
+    uses: ./.github/workflows/template-scheduled-reminder.yml
+    secrets: inherit
+    with:
+      REPO: "alstraab/survey-generator"
