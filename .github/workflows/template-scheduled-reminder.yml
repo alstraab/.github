@@ -23,7 +23,7 @@ jobs:
             --title "${{ env.TITLE }}" \
             --label "${{ env.LABELS }}" \
             --body "${{ env.BODY }}") \
-            --assignee "${{ env.ASSIGNEES }}"
+            --assignee $ASSIGNEES)
           echo "Issue created: $new_issue_url"
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
