@@ -22,7 +22,7 @@ jobs:
           echo "Issue created: $new_issue_url"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_REPO: "alstra-web" ## Space-separated list of repositories
+          GH_REPO: "alstraab/alstra-web" ## Space-separated list of repositories
           TITLE: "Monthly Dependency Update Reminder"
           LABELS: "dependencies"
           BODY: |
