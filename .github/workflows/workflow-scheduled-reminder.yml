@@ -1,4 +1,4 @@
-name: Package Update Reminder
+name: Scheduled Update Reminder
 
 on:
   workflow_dispatch:
