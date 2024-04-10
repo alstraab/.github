@@ -1,0 +1,13 @@
+name: Package Update Reminder
+
+on:
+  workflow_dispatch:
+#   schedule:
+#     - cron: "0 0 1 * *" # Runs at 00:00 UTC on the first day of every month
+
+jobs:
+  alstra-web:
+    uses: ./.github/workflows/template-scheduled-reminder.yml
+    secrets: inherit
+    with:
+      REPO: "alstraab/alstra-web"

@@ -1,0 +1,38 @@
+name: Template Package Update Reminder
+
+on:
+  workflow_call:
+    inputs:
+      REPO:
+        description: "Repository name (format: org/repo)"
+        required: true
+        type: string
+
+jobs:
+  create_issue:
+    name: Create package update reminder issue
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      issues: write
+    steps:
+      - name: Create package update reminder issue in selected repositories
+        id: create_issue
+        run: |
+          new_issue_url=$(gh issue create \
+            --repo "${{ github.event.inputs.REPO }}" \
+            --title "Monthly Dependency Update Reminder" \
+            --label "dependencies" \
+            --body "It's time to check and update our packages to the latest versions.
+            - [ ] Review outdated packages
+            - [ ] Update packages
+            - [ ] Run tests
+            - [ ] Merge updates after successful review and testing")
+          echo "Issue created: $new_issue_url"
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        continue-on-error: true
+
+      - name: Check for issue creation failure
+        if: steps.create_issue.outcome == 'failure'
+        run: echo "Failed to create the issue. Please make sure the GH_TOKEN is correctly set. Check this repo wiki for information on how to set up the GH_TOKEN."
