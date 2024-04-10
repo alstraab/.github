@@ -29,7 +29,7 @@ jobs:
           GH_REPO: ${{ inputs.REPO }}
           TITLE: "Monthly Dependency Update Reminder"
           LABELS: "dependencies"
-          ASSIGNEES: juliandreas
+          ASSIGNEES: "juliandreas"
           BODY: |
             It's time to check and update our packages to the latest versions.
             - [ ] Review outdated packages
