@@ -20,7 +20,7 @@ jobs:
         id: create_issue
         run: |
           new_issue_url=$(gh issue create \
-            --repo "${{ github.event.inputs.REPO }}" \
+            --repo ${{ github.event.inputs.REPO }} \
             --title "Monthly Dependency Update Reminder" \
             --label "dependencies" \
             --body "It's time to check and update our packages to the latest versions.
