@@ -7,6 +7,10 @@ on:
         description: "Repository name (format: org/repo)"
         required: true
         type: string
+      ASSIGNEES:
+        description: "Comma-separated list of GitHub usernames to assign the issue to"
+        required: true
+        type: string
 
 jobs:
   create_issue:
@@ -33,7 +37,7 @@ jobs:
           GH_REPO: ${{ inputs.REPO }}
           TITLE: "Monthly Dependency Update Reminder"
           LABELS: "dependencies"
-          ASSIGNEES: juliandreas,klastarnstrom,ajanryd,karl-m-t,Antonia-91
+          ASSIGNEES: ${{ inputs.ASSIGNEES }}
           BODY: |
             It's time to check and update our packages to the latest versions. Be careful with major updates (sometimes it's better to wait with them).
             - [ ] Review outdated packages
