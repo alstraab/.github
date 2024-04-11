@@ -2,51 +2,97 @@ name: Scheduled Update Reminder
 
 on:
   workflow_dispatch:
-#   schedule:
-#     - cron: "0 0 * * 1" # Runs at 00:00 UTC every Monday
+  schedule:
+    - cron: "0 0 * * 1" # Runs at 00:00 UTC every Monday
 
 jobs:
-  #   check-first-monday:
-  #     runs-on: ubuntu-latest
-  #     outputs:
-  #       is_first_monday: ${{ steps.check-date.outputs.is_first_monday }}
-  #     steps:
-  #       - name: Check if it's the first Monday of the month
-  #         id: check-date
-  #         run: |
-  #           TODAY=$(date +'%d')
-  #           if [ "$TODAY" -le "7" ]; then
-  #               echo "It's the first Monday of the month."
-  #               echo "::set-output name=is_first_monday::true"
-  #           else
-  #               echo "It's not the first Monday of the month."
-  #               echo "::set-output name=is_first_monday::false"
-  #           fi
+  check-first-monday:
+    runs-on: ubuntu-latest
+    outputs:
+      is_first_monday: ${{ steps.check-date.outputs.is_first_monday }}
+    steps:
+      - name: Check if it's the first Monday of the month
+        id: check-date
+        run: |
+          TODAY=$(date +'%d')
+          if [ "$TODAY" -le "7" ]; then
+              echo "It's the first Monday of the month."
+              echo "::set-output name=is_first_monday::true"
+          else
+              echo "It's not the first Monday of the month."
+              echo "::set-output name=is_first_monday::false"
+          fi
 
   # juliandreas,klastarnstrom,ajanryd,karl-m-t,Antonia-91
 
   alstra-web:
-    # needs: check-first-monday
-    # if: needs.check-first-monday.outputs.is_first_monday == 'true'
+    needs: check-first-monday
+    if: needs.check-first-monday.outputs.is_first_monday == 'true'
     uses: ./.github/workflows/template-scheduled-reminder.yml
     secrets: inherit
     with:
       REPO: "alstraab/alstra-web"
-      ASSIGNEES: "juliandreas,klastarnstrom"
-#   survey-generator:
-#     # needs: check-first-monday
-#     # if: needs.check-first-monday.outputs.is_first_monday == 'true'
-#     uses: ./.github/workflows/template-scheduled-reminder.yml
-#     secrets: inherit
-#     with:
-#       REPO: "alstraab/survey-generator"
-#       ASSIGNEES: "juliandreas,klastarnstrom,ajanryd"
+      ASSIGNEES: "juliandreas,klastarnstrom,karl-m-t,Antonia-91"
 
-#   wtw-blue:
-#     # needs: check-first-monday
-#     # if: needs.check-first-monday.outputs.is_first_monday == 'true'
-#     uses: ./.github/workflows/template-scheduled-reminder.yml
-#     secrets: inherit
-#     with:
-#       REPO: "alstraab/wtw-blue"
-#       ASSIGNEES: "juliandreas,klastarnstrom,ajanryd,karl-m-t,Antonia-91"
+  survey-generator:
+    needs: check-first-monday
+    if: needs.check-first-monday.outputs.is_first_monday == 'true'
+    uses: ./.github/workflows/template-scheduled-reminder.yml
+    secrets: inherit
+    with:
+      REPO: "alstraab/survey-generator"
+      ASSIGNEES: "juliandreas,klastarnstrom,ajanryd"
+
+  survey-generator-legacy:
+    needs: check-first-monday
+    if: needs.check-first-monday.outputs.is_first_monday == 'true'
+    uses: ./.github/workflows/template-scheduled-reminder.yml
+    secrets: inherit
+    with:
+      REPO: "alstraab/survey-generator-legacy"
+      ASSIGNEES: "ajanryd,klastarnstrom"
+
+  survey-generator-login:
+    needs: check-first-monday
+    if: needs.check-first-monday.outputs.is_first_monday == 'true'
+    uses: ./.github/workflows/template-scheduled-reminder.yml
+    secrets: inherit
+    with:
+      REPO: "alstraab/survey-generator-login"
+      ASSIGNEES: "ajanryd"
+
+  wtw-blue:
+    needs: check-first-monday
+    if: needs.check-first-monday.outputs.is_first_monday == 'true'
+    uses: ./.github/workflows/template-scheduled-reminder.yml
+    secrets: inherit
+    with:
+      REPO: "alstraab/wtw-blue"
+      ASSIGNEES: "juliandreas,klastarnstrom,ajanryd,karl-m-t,Antonia-91"
+
+  wtw-bluev4:
+    needs: check-first-monday
+    if: needs.check-first-monday.outputs.is_first_monday == 'true'
+    uses: ./.github/workflows/template-scheduled-reminder.yml
+    secrets: inherit
+    with:
+      REPO: "alstraab/wtw-bluev4"
+      ASSIGNEES: "ajanryd"
+
+  market-direction:
+    needs: check-first-monday
+    if: needs.check-first-monday.outputs.is_first_monday == 'true'
+    uses: ./.github/workflows/template-scheduled-reminder.yml
+    secrets: inherit
+    with:
+      REPO: "alstraab/market-direction"
+      ASSIGNEES: "ajanryd,klastarnstrom"
+
+  aon-arg:
+    needs: check-first-monday
+    if: needs.check-first-monday.outputs.is_first_monday == 'true'
+    uses: ./.github/workflows/template-scheduled-reminder.yml
+    secrets: inherit
+    with:
+      REPO: "alstraab/aon-arg"
+      ASSIGNEES: "ajanryd"
