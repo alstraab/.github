@@ -23,8 +23,6 @@ jobs:
               echo "::set-output name=is_first_monday::false"
           fi
 
-  # juliandreas,klastarnstrom,ajanryd,karl-m-t,Antonia-91
-
   alstra-web:
     needs: check-first-monday
     if: needs.check-first-monday.outputs.is_first_monday == 'true'
