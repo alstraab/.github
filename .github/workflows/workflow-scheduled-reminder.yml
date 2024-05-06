@@ -30,6 +30,7 @@ jobs:
     secrets: inherit
     with:
       REPO: "alstraab/alstra-web"
+      PROJECT: "Other"
       ASSIGNEES: "juliandreas,klastarnstrom,karl-m-t,Antonia-91"
 
   survey-generator:
@@ -39,6 +40,7 @@ jobs:
     secrets: inherit
     with:
       REPO: "alstraab/survey-generator"
+      PROJECT: "Survey Generator"
       ASSIGNEES: "juliandreas,klastarnstrom,ajanryd"
 
   survey-generator-legacy:
@@ -48,6 +50,7 @@ jobs:
     secrets: inherit
     with:
       REPO: "alstraab/survey-generator-legacy"
+      PROJECT: "Survey Generator"
       ASSIGNEES: "ajanryd,klastarnstrom"
 
   survey-generator-login:
@@ -57,6 +60,7 @@ jobs:
     secrets: inherit
     with:
       REPO: "alstraab/survey-generator-login"
+      PROJECT: "Survey Generator"
       ASSIGNEES: "ajanryd"
 
   wtw-blue:
@@ -66,6 +70,7 @@ jobs:
     secrets: inherit
     with:
       REPO: "alstraab/wtw-blue"
+      PROJECT: "WTW Blue"
       ASSIGNEES: "juliandreas,klastarnstrom,ajanryd,karl-m-t,Antonia-91"
 
   wtw-bluev4:
@@ -75,6 +80,7 @@ jobs:
     secrets: inherit
     with:
       REPO: "alstraab/wtw-bluev4"
+      PROJECT: "WTW Blue"
       ASSIGNEES: "ajanryd"
 
   market-direction:
@@ -84,6 +90,7 @@ jobs:
     secrets: inherit
     with:
       REPO: "alstraab/market-direction"
+      PROJECT: "Other"
       ASSIGNEES: "ajanryd,klastarnstrom"
 
   aon-arg:
@@ -93,4 +100,5 @@ jobs:
     secrets: inherit
     with:
       REPO: "alstraab/aon-arg"
+      PROJECT: "Other"
       ASSIGNEES: "ajanryd"
