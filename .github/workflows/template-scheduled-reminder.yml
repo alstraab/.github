@@ -7,6 +7,10 @@ on:
         description: "Repository name (format: org/repo)"
         required: true
         type: string
+      PROJECT:
+        description: "Project name"
+        required: true
+        type: string
       ASSIGNEES:
         description: "Comma-separated list of GitHub usernames to assign the issue to"
         required: true
@@ -32,9 +36,12 @@ jobs:
           if [[ $PINNED == true ]]; then
             gh issue pin "$new_issue_url"
           fi
+          # Add the issue to the project and set it to "Ready" status
+          gh issue edit "$new_issue_url" --project "${{ env.GH_PROJECT }}" --column "Ready"
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GH_REPO: ${{ inputs.REPO }}
+          GH_PROJECT: ${{ inputs.PROJECT }}
           TITLE: "Monthly Dependency Update Reminder"
           LABELS: "dependencies"
           ASSIGNEES: ${{ inputs.ASSIGNEES }}
@@ -42,5 +49,4 @@ jobs:
             It's time to check and update our packages to the latest versions. Be careful with major updates (sometimes it's better to wait with them).
             - [ ] Review outdated packages
             - [ ] Update packages
-            - [ ] Run tests
           PINNED: true
